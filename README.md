@@ -12,7 +12,7 @@ Clone the repository to your computer and run afterwards this command:
 
 This is the easiest way to install the template
 
-    $ django-admin.py startproject --template=https://github.com/clione/dboilerplate/archive/master.zip myproject
+    $ django-admin startproject --template=https://github.com/clione/dboilerplate3/archive/master.zip myproject
 
 ## Requirements
 - Django 1.7.x

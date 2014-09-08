@@ -1,6 +1,6 @@
 import os
 
-from defaults import *
+from .defaults import *
 
 ####################################################
 # Database settings (default: sqlite3)             #
@@ -126,12 +126,12 @@ SAMPLEDATAHELPER_MODELS = [
 #
 #######################################################
 
-print """
+print("""
 #####################################################################\n\
                             Debug info\n\n\
- * BASE_DIR: %s\n\
- * MEDIA_DIR: %s\n\
- * STATIC_DIR: %s\n\
- * TEMPLATE_DIRS: %s\n\n\
+ * BASE_DIR: {}\n\
+ * MEDIA_DIR: {}\n\
+ * STATIC_DIR: {}\n\
+ * TEMPLATE_DIRS: {}\n\n\
 #####################################################################\n\
-""" % (BASE_DIR, MEDIA_ROOT, STATIC_ROOT, TEMPLATE_DIRS)
+""".format(BASE_DIR, MEDIA_ROOT, STATIC_ROOT, TEMPLATE_DIRS))
