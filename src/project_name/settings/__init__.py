@@ -4,7 +4,7 @@ should be loaded.
 """
 
 #from state_control import *
-from defaults import *
+from .defaults import *
 import os
 
 DEBUG = bool(int(os.getenv('DJANGO_IS_DEBUG', True)))

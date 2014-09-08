@@ -1,6 +1,4 @@
-django
-south  # Manages migrations
+django==1.7
 Pillow
 django-allauth
-git+git://github.com/yawd/yawd-admin.git
 django-htmlmin
