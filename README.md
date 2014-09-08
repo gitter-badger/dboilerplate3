@@ -1,6 +1,6 @@
-# dboilerplate
+# dboilerplate3
 
-dboilerplate is a django template for setting up projects quickly. There are two options to use it:
+dboilerplate3 is a django template for setting up projects quickly, based in python 3 and django 1.7. There are two options to use it:
 
 * Install it from the repository:
 

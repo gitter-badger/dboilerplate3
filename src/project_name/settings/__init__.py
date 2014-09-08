@@ -11,11 +11,11 @@ DEBUG = bool(int(os.getenv('DJANGO_IS_DEBUG', True)))
 TEMPLATE_DEBUG = DEBUG
 
 # Only valid if DEBUG=True. Sets the staging settings.
-STAGING = bool(int(os.getenv('DJANGO_IS_STAGING', False))) 
+STAGING = bool(int(os.getenv('DJANGO_IS_STAGING', False)))
 
 if DEBUG and not STAGING:
-    from development import *
+    from .development import *
 elif DEBUG and STAGING:
-    from staging import *
+    from .staging import *
 else:
-    from production import *
+    from .production import *

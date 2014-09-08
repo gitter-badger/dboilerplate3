@@ -3,8 +3,7 @@
 # TO STAGING!!                                     #
 ####################################################
 
-
-from defaults import *
+from .defaults import *
 
 ####################################################
 # Database settings (default: mysql)               #
