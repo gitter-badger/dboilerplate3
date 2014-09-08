@@ -15,8 +15,8 @@ This is the easiest way to install the template
     $ django-admin.py startproject --template=https://github.com/clione/dboilerplate/archive/master.zip myproject
 
 ## Requirements
-- django 1.4.x-1.6.x
-- Python 2.7.x
+- Django 1.7.x
+- Python 3.4.x
 
 PLEASE NOTE: This boilerplate is still in development, the documentation
 is not finished yet. You can help us if you want!
@@ -28,11 +28,9 @@ Features:
 - Embedded sitemaps
 - SCSS via grunt
 - Automatic application creation
-- Fabric scripts for deployment
 - Muti environment requirements files
 - Multi environment settings files
 - Database data generator (for development stage, thanks Kaleidos)
-- yawd-admin
 - Improved logging mechanism
 
 
