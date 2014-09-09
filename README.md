@@ -6,7 +6,7 @@ dboilerplate3 is a django template for setting up projects quickly, based in pyt
 
 Clone the repository to your computer and run afterwards this command:
 
-    $ django-admin.py startproject --template=/path/to/the/template
+    $ django-admin startproject --template=/path/to/the/template
 
 * Install it from GitHub
 
