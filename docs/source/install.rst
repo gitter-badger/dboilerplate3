@@ -1,7 +1,7 @@
 How to install
 ==============
 
-Installing teh boilerplate is easy, there's two ways to do it.
+Installing the boilerplate is easy, there's two possible ways to do it.
 
 Clone the repository
 --------------------
