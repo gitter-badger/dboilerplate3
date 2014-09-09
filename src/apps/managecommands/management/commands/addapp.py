@@ -2,7 +2,7 @@ import sys, os
 from importlib import import_module
 from django.core.management.base import BaseCommand, CommandError
 from django.core.management.templates import TemplateCommand
-from resource_addnewapp import _models, _views
+from .resource_addnewapp import _models, _views
 from django.conf import settings
 
 def change_to_apps_dir():

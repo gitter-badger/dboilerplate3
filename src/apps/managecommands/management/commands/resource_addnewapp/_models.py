@@ -1,7 +1,7 @@
 import sys, os
 from importlib import import_module
-from _commons import validate_yes_no, MODELNAME_template
-import _admin
+from ._commons import validate_yes_no, MODELNAME_template
+from . import _admin
 
 def create_model(model_name):
 	MODELNAME_template('models', model_name)
@@ -9,9 +9,9 @@ def create_model(model_name):
 
 def request(app_name):
 	while True:
-		model_required = validate_yes_no(raw_input('Does your app require a models.py [y/n]: '))
+		model_required = validate_yes_no(input('Does your app require a models.py [y/n]: '))
 		if model_required:
-			model_name = raw_input('What is the name of your model? ')
+			model_name = input('What is the name of your model? ')
 			# Default model name if none supplied
 			if not model_name:
 				model_name = "MyModel"

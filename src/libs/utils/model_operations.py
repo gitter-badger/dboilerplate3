@@ -1,4 +1,4 @@
-import urllib
+import urllib.request, urllib.parse, urllib.error
 import json
 from django.utils.html import strip_tags
 
@@ -33,13 +33,13 @@ def AlchemyKeywordGeneration(object, content, API_KEY, defaults=False):
     # Sanitize the content
     clean_content = content_clean(content)
 
-    POSTDATA = urllib.urlencode({
+    POSTDATA = urllib.parse.urlencode({
         "apikey": API_KEY,
         "text": clean_content,
         "outputMode": "json"
     })
 
-    response = urllib.urlopen("http://access.alchemyapi.com/calls/text/TextGetRankedKeywords", POSTDATA)
+    response = urllib.request.urlopen("http://access.alchemyapi.com/calls/text/TextGetRankedKeywords", POSTDATA)
     keywords = json.loads(response.read())['keywords']
 
     meta_keywords_to_save = []

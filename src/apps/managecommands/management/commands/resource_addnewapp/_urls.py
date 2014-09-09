@@ -1,5 +1,5 @@
 import string
-from _commons import validate_yes_no, return_template, is_class_based
+from ._commons import validate_yes_no, return_template, is_class_based
 
 def create_urls(views_type, view_name):
 
@@ -9,7 +9,7 @@ def create_urls(views_type, view_name):
 			temp_id = 'cbv_urls'
 		else:
 			temp_id = 'urls'
-		
+
 		template = string.Template(open(return_template(temp_id)).read())
 		variables = {'VIEWNAME':view_name}
 		result = template.substitute(variables)
@@ -21,7 +21,7 @@ def create_urls(views_type, view_name):
 
 def request(views_type, view_name):
 	while True:
-		urls_required = validate_yes_no(raw_input('Do your views require a urls.py [y/n]: '))
+		urls_required = validate_yes_no(input('Do your views require a urls.py [y/n]: '))
 		if urls_required:
 			create_urls(views_type, view_name)
 			return

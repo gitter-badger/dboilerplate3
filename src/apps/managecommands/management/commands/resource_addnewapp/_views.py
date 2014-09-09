@@ -1,6 +1,6 @@
 import string
-from _commons import validate_yes_no, return_template, is_class_based
-import _urls, _templates
+from ._commons import validate_yes_no, return_template, is_class_based
+from . import _urls, _templates
 
 def create_view(views_name, views_type, template_name, model_name = False):
 
@@ -24,24 +24,24 @@ def create_view(views_name, views_type, template_name, model_name = False):
 		result = template.substitute(variables)
 
 		view_file.write(result)
-		
+
 		view_file.close()
 
 	return
 
 def request(app_name, model_name = False):
 	while True:
-		views_required = validate_yes_no(raw_input('Does your app require a views.py [y/n]: '))
+		views_required = validate_yes_no(input('Does your app require a views.py [y/n]: '))
 		if views_required:
-			
+
 			# Request name of view
-			views_name = raw_input('Enter the name of your view: ')
+			views_name = input('Enter the name of your view: ')
 			if not views_name:
 				views_name = 'MyView'
 
-			# Request whether view should be classed based or function 
-			views_type = raw_input('Is your view a) class based or b) a function [a/b]: ')
-			
+			# Request whether view should be classed based or function
+			views_type = input('Is your view a) class based or b) a function [a/b]: ')
+
 			# Check if view requires a template
 			template_name = _templates.request(views_name)
 
