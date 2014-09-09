@@ -26,6 +26,7 @@ Backend
 
 .. toctree::
     :maxdepth: 2
+
     install
     settings
     creatingapps
@@ -38,6 +39,7 @@ Frontend
 
 .. toctree::
     :maxdepth: 2
+
     setup
 
 Indices and tables
