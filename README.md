@@ -64,3 +64,9 @@ From frontend folder run...
 
     'grunt' - Build js and CSS files
     'watch' - Watch for changes to js or CSS files
+
+#### Copyright
+
+You're free to copy, modify and distribute this code under the MIT license.
+
+(c) 2014 Clione Software and Havas Worldwide London
