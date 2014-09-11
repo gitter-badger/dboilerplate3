@@ -21,6 +21,8 @@ This project requires Django 1.7 and Python 3.3 or higher to run. If you're
 looking for support for django 1.6 or less and python 2.7 please take a look
 to the original dboilerplate project in `here <https://github.com/clione/dboilerplate>`_
 
+This documentation should be fairly valid fot both versions of the boilderplate.
+
 Backend
 -------
 
