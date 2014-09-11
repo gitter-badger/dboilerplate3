@@ -29,6 +29,7 @@ Backend
 
     install
     settings
+    requirements
     creatingapps
     abstractmodels
     logging
