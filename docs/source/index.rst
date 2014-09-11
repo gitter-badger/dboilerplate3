@@ -43,7 +43,9 @@ Frontend
 .. toctree::
     :maxdepth: 2
 
-    setup
+    frontend_install
+    frontend_settings
+    working
 
 Indices and tables
 ==================
