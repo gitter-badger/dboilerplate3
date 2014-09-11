@@ -14,7 +14,8 @@ This is the easiest way to install the template
 
     $ django-admin startproject --template=https://github.com/clione/dboilerplate3/archive/master.zip myproject
 
-You can get a good grip of how this boilerplate works by looking the `documentation <http://dboilerplate3.readthedocs.org/en/latest/>`_
+You can get a good grip of how this boilerplate works by looking the
+[documentation](http://dboilerplate3.readthedocs.org/en/latest/)
 
 ## Requirements
 - Django 1.7.x
