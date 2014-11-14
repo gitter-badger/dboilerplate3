@@ -16,7 +16,7 @@ def MODELNAME_template(filename, model_name):
 	variables = {'MODELNAME':model_name}
 	result = template.substitute(variables)
 	with open('%s.py' % filename, 'a+b') as model_file:
-		model_file.write(result)
+		model_file.write(bytes(result, 'UTF-8'))
 		model_file.close()
 	return
 

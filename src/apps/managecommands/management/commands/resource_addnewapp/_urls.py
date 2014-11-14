@@ -14,7 +14,7 @@ def create_urls(views_type, view_name):
 		variables = {'VIEWNAME':view_name}
 		result = template.substitute(variables)
 
-		urls_file.write(result)
+		urls_file.write(bytes(result, 'UTF-8'))
 		urls_file.close()
 
 	return
