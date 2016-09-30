@@ -4,7 +4,7 @@
     "dependencies": {
         "modernizr":"latest",
         "jquery":"latest",
-        "foundation":"latest"
+        "foundation-sites":"latest"
     },
     "devDependencies": {}
 }

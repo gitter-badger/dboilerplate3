@@ -24,6 +24,8 @@ ALLOWED_HOSTS = ['*']  # By default in development we allow any host
 
 SECRET_KEY = 'v*&#e(xgw-fs1l#e%^nm-gqju(%hx@my@!9w^e08xyd(31cv90'
 
+# Remove password validation for development.
+AUTH_PASSWORD_VALIDATORS = []
 
 ####################################################
 # Internationalization                             #
@@ -37,13 +39,13 @@ TIME_ZONE = 'UTC'
 # Email (default: deactivated)                     #
 ####################################################
 
-#EMAIL_HOST = 'localhost'
-#EMAIL_PORT = 25
-#EMAIL_HOST_USER = ''
-#EMAIL_HOST_PASSWORD = ''
-#DEFAULT_FROM_EMAIL = 'noreply@tipexchange.vanish.co.uk'
-#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-#EMAIL_USE_TLS = True
+# EMAIL_HOST = 'localhost'
+# EMAIL_PORT = 25
+# EMAIL_HOST_USER = ''
+# EMAIL_HOST_PASSWORD = ''
+# DEFAULT_FROM_EMAIL = 'noreply@tipexchange.vanish.co.uk'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_USE_TLS = True
 
 
 ####################################################
@@ -84,7 +86,7 @@ FIXTURE_DIRS = (
 ####################################################
 
 INSTALLED_APPS += (
-    'sampledatahelper',
+    # 'sampledatahelper',
 )
 
 ##########################################################
@@ -93,32 +95,21 @@ INSTALLED_APPS += (
 # at https://github.com/kaleidos/django-sampledatahelper #
 ##########################################################
 
-SAMPLEDATAHELPER_SEED = 21341245334214213498921347890
+# SAMPLEDATAHELPER_SEED = 21341245334214213498921347890
 
-SAMPLEDATAHELPER_MODELS = [
-    {
-        'model': 'feature.Feature',
-        'number': 1,
-        'fields_overwrite': [
-            ('title', 'The Vanish Gold Range'),
-            ('status', 1),
-            ('description', 'Lorem ipsum dolor sit amet, consectetur adipisicing'),
-            ('link', 'http://example.com'),
-            ('linkname', 'Buy Vanish'),
-        ]
-    },
-    {
-        'model': 'videos.Video',
-        'number': 1,
-        'fields_overwrite': [
-            ('status', 3),
-            ('provider', 0),
-            ('provider_id', 'fDa9DVuwRDc'),
-        ]
-    },
-    {'model': 'newsletter.Newsletter', 'number': 5, },
-    {'model': 'newsletter.NewsletterArticle', 'number': 5, },
-]
+# SAMPLEDATAHELPER_MODELS = [
+#     {'model': 'application.ModelName', 'number': 5, },
+#     {
+#         'model': 'application.ModelName',
+#         'number': 1,
+#         'fields_overwrite': [
+#             ('fieldname', 'Value'),
+#             ('fieldname', 'Value'),
+#             ('fieldname', 'Value'),
+#             ('fieldname', 'Value'),
+#         ]
+#     },
+# ]
 
 #######################################################
 #
@@ -127,11 +118,20 @@ SAMPLEDATAHELPER_MODELS = [
 #######################################################
 
 print("""
-#####################################################################\n\
-                            Debug info\n\n\
- * BASE_DIR: {}\n\
- * MEDIA_DIR: {}\n\
- * STATIC_DIR: {}\n\
- * TEMPLATE_DIRS: {}\n\n\
-#####################################################################\n\
-""".format(BASE_DIR, MEDIA_ROOT, STATIC_ROOT, TEMPLATE_DIRS))
+*** DEBUG ACTIVE ***
+
+###############################################################################
+# PLEASE NOTE THAT IN DEVELOPMENT MODE THERE ARE NO PASSWORD VALIDATORS
+# AND ALL HOSTS ARE ALLOWED
+###############################################################################
+
+* VERSION: {}
+* DB_ENGINE: {}
+* DB: {}
+* TEMPLATE_PATHS: {}
+* STATIC_ROOT: {}
+* MEDIA_ROOT: {}
+* BASE_DIR: {}
+""".format(VERSION, DATABASES['default']['ENGINE'],
+           DATABASES['default']['NAME'], TEMPLATES[0]['DIRS'],
+           STATIC_ROOT, MEDIA_ROOT, BASE_DIR))

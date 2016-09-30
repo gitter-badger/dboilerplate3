@@ -1,10 +1,15 @@
-"""
-Default settings for the project. All the common settings to all the
-environments should be here, like applications.
+"""Default settings for the project.
+
+All the common settings to all the environments should be here,
+like applications or general configurations.
 """
 
 import os
+import mimetypes
+
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+VERSION = '20160930'
 
 ####################################################
 # Applications                                     #
@@ -21,9 +26,8 @@ DJANGO_APPS = (
     'django.contrib.sitemaps',
 )
 
-APPS = (
-    'apps.managecommands',
-)
+# Put your applications here
+APPS = ()
 
 THIRDPARTY_APPS = (
     'allauth',                                   # General AllAuth stuff
@@ -78,34 +82,61 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",  # Allauth
 )
 
+# Password validation
+# https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
+
+AUTH_PASSWORD_VALIDATORS = [
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },
+]
+
+AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend',)
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+SESSION_COOKIE_SECURE = False
+SESSION_COOKIE_DOMAIN = None
 
 ####################################################
 # Templating                                       #
 ####################################################
 
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-    #'django.template.loaders.eggs.Loader',
-)
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        # 'APP_DIRS': True,
+        'OPTIONS': {
+            'debug': True,
+            'context_processors': [
+                "django.contrib.auth.context_processors.auth",
+                "django.core.context_processors.debug",
+                "django.core.context_processors.i18n",
+                "django.core.context_processors.media",
+                "django.core.context_processors.static",
+                "django.contrib.messages.context_processors.messages",
+                "django.core.context_processors.request",
 
-TEMPLATE_CONTEXT_PROCESSORS = (
-    "django.contrib.auth.context_processors.auth",
-    "django.core.context_processors.debug",
-    "django.core.context_processors.i18n",
-    "django.core.context_processors.media",
-    "django.core.context_processors.static",
-    "django.contrib.messages.context_processors.messages",
-    "django.core.context_processors.request",
-
-    # Allauth
-    "allauth.account.context_processors.account",
-    "allauth.socialaccount.context_processors.socialaccount",
-)
-
-TEMPLATE_DIRS = (
-    (BASE_DIR + '/templates'),
-)
+                # Allauth
+                "allauth.account.context_processors.account",
+                "allauth.socialaccount.context_processors.socialaccount",
+            ],
+            'loaders': [
+                'django.template.loaders.filesystem.Loader',
+                'django.template.loaders.app_directories.Loader',
+                # 'django.template.loaders.eggs.Loader',
+            ],
+        },
+    },
+]
 
 
 ####################################################
@@ -128,7 +159,6 @@ LOCALE_PATHS = (
 # Webfont mime type fix for firefox and safari
 #######################################################
 
-import mimetypes
 mimetypes.add_type("application/font-woff", ".woff", True)
 
 ####################################################

@@ -1,25 +1,25 @@
 # dboilerplate3
 
-dboilerplate3 is a django template for setting up projects quickly, based in python 3 and django 1.7. There are two options to use it:
+dboilerplate3 is a django template for setting up projects quickly, based in python 3 and django 1.10. There are two options to use it:
 
 * Install it from the repository:
 
 Clone the repository to your computer and run afterwards this command:
 
-    $ django-admin startproject --template=/path/to/the/template
+    $ django-admin startproject --template=/path/to/the/template <your_project_name>
 
 * Install it from GitHub
 
 This is the easiest way to install the template
 
-    $ django-admin startproject --template=https://github.com/clione/dboilerplate3/archive/master.zip myproject
+    $ django-admin startproject --template=https://github.com/clione/dboilerplate3/archive/master.zip <your_project_name>
 
 You can get a good grip of how this boilerplate works by looking the
 [documentation](http://dboilerplate3.readthedocs.org/en/latest/)
 
 ## Requirements
-- Django 1.7.x
-- Python 3.4.x
+- Django 1.10.x
+- Python 3.5.x
 
 PLEASE NOTE: This boilerplate is still in development, the documentation
 is not finished yet. You can help us if you want!
@@ -72,4 +72,4 @@ From frontend folder run...
 
 You're free to copy, modify and distribute this code under the MIT license.
 
-(c) 2014 Clione Software and Havas Worldwide London
+(c) 2014-2016 Clione Software

@@ -8,7 +8,6 @@ from .defaults import *
 import os
 
 DEBUG = bool(int(os.getenv('DJANGO_IS_DEBUG', True)))
-TEMPLATE_DEBUG = DEBUG
 
 # Only valid if DEBUG=True. Sets the staging settings.
 STAGING = bool(int(os.getenv('DJANGO_IS_STAGING', False)))
