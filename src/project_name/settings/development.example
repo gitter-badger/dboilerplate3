@@ -117,6 +117,9 @@ INSTALLED_APPS += (
 #
 #######################################################
 
+DEBUG_DB_ENGINE = DATABASES.get('default', 'None').get('ENGINE', 'None')
+DEBUG_DB_NAME = DATABASES.get('default', 'None').get('NAME', 'None')
+
 print("""
 *** DEBUG ACTIVE ***
 
@@ -132,6 +135,5 @@ print("""
 * STATIC_ROOT: {}
 * MEDIA_ROOT: {}
 * BASE_DIR: {}
-""".format(VERSION, DATABASES['default']['ENGINE'],
-           DATABASES['default']['NAME'], TEMPLATES[0]['DIRS'],
+""".format(VERSION, DEBUG_DB_ENGINE, DEBUG_DB_NAME, TEMPLATES[0].get('DIRS', 'None'),
            STATIC_ROOT, MEDIA_ROOT, BASE_DIR))

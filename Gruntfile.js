@@ -10,6 +10,8 @@ module.exports = function(grunt) {
       dist: {
         src: [
           '<%= pkg.project_paths.bower_folder %>jquery/dist/jquery.js',
+          '<%= pkg.project_paths.bower_folder %>foundation-sites/dist/js/**/*.js',
+          '<%= pkg.project_paths.bower_folder %>foundation-sites/js/**/*.js',
           // '<%= pkg.project_paths.bower_folder %>foundation/js/foundation.js',
           '<%= pkg.src_paths.js %>**/*.js'
         ],
@@ -39,7 +41,7 @@ module.exports = function(grunt) {
         cwd: '<%= pkg.dest_paths.css %>',
         src: ['*.css',],
         dest: '<%= pkg.dest_paths.css %>',
-        ext: '.css' 
+        ext: '.css'
       }
     },
     // JSHint to review JS code before build

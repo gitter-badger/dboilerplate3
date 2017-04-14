@@ -14,9 +14,9 @@ class BaseFields(models.Model):
     """Base fields that should be included in all models."""
 
     active = models.BooleanField(default=True)
-    date_modified = models.DateTimeField(blank=True, null=True, auto_now=True)
-    date_created = models.DateTimeField(blank=True, null=True,
-                                        default=datetime.now(), editable=False)
+    mod_date = models.DateTimeField(blank=True, null=True, auto_now=True)
+    pub_date = models.DateTimeField(blank=True, null=True,
+                                    default=datetime.now(), editable=False)
 
     class Meta:
         abstract = True

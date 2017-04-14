@@ -18,8 +18,8 @@ You can get a good grip of how this boilerplate works by looking the
 [documentation](http://dboilerplate3.readthedocs.org/en/latest/)
 
 ## Requirements
-- Django 1.10.x
-- Python 3.5.x
+- Django 1.11.x
+- Python 3.6.x
 
 PLEASE NOTE: This boilerplate is still in development, the documentation
 is not finished yet. You can help us if you want!
@@ -28,9 +28,9 @@ D-Boilerplate is a simple django boilerplate that we use at Havas Worldwide Lond
 
 Features:
 
+- Foundation 6 (Foundation Sites)
 - Embedded sitemaps
-- SCSS via grunt
-- Automatic application creation
+- SCSS/JS via grunt
 - Muti environment requirements files
 - Multi environment settings files
 - Database data generator (for development stage, thanks Kaleidos)
@@ -43,8 +43,8 @@ You will need grunt, bower and compass installed for this boilerplate uses SCSS 
 
 ### Requirements
 
-- Ruby 1.9+
-- NodeJS
+- Ruby 2.4+
+- NodeJS 7.7.x
 
 To install the required tools do (as root):
 
@@ -72,4 +72,4 @@ From frontend folder run...
 
 You're free to copy, modify and distribute this code under the MIT license.
 
-(c) 2014-2016 Clione Software
+(c) 2014-2017 URCO Software

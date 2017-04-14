@@ -9,7 +9,7 @@ import mimetypes
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-VERSION = '20160930'
+VERSION = '20170414'
 
 ####################################################
 # Applications                                     #
@@ -33,10 +33,10 @@ THIRDPARTY_APPS = (
     'allauth',                                   # General AllAuth stuff
     'allauth.account',                           # Database authentication
     'allauth.socialaccount',                     # Social auth abilities
-    'allauth.socialaccount.providers.facebook',  # Facebook auth
-    'allauth.socialaccount.providers.google',    # Google auth
     # For extra authentication mechanisms please check the allauth docs
     # website: http://django-allauth.readthedocs.org/en/latest/
+    # 'allauth.socialaccount.providers.facebook',  # Facebook auth
+    # 'allauth.socialaccount.providers.google',    # Google auth
 )
 
 INSTALLED_APPS = DJANGO_APPS + THIRDPARTY_APPS + APPS
@@ -148,7 +148,7 @@ USE_L10N = True
 USE_TZ = True
 
 LANGUAGES = (
-    ('en_GB', 'English'),
+    ('en_US', 'English'),
 )
 
 LOCALE_PATHS = (
@@ -197,9 +197,9 @@ ACCOUNT_DEFAULT_HTTP_PROTOCOL = 'https'
 ACCOUNT_LOGOUT_REDIRECT_URL = '/'
 ACCOUNT_SIGNUP_PASSWORD_VERIFICATION = True
 ACCOUNT_USERNAME_MIN_LENGTH = 3
-ACCOUNT_USERNAME_BLACKLIST = ['root', 'penis', 'cunt', 'stupid', 'password']
+ACCOUNT_USERNAME_BLACKLIST = ['root', 'administrator', 'superuser']
 ACCOUNT_USERNAME_REQUIRED = True
-ACCOUNT_PASSWORD_MIN_LENGTH = 4
+ACCOUNT_PASSWORD_MIN_LENGTH = 8
 ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
 # This setting will try to get the data directly from the social account to
 # bypass the signup form. If there is some error the form still will appear

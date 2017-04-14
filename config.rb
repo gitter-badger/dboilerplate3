@@ -1,6 +1,6 @@
 # Require any additional compass plugins here.
 additional_import_paths = [
-							"bower_components/foundation/scss",
+							"bower_components/foundation-sites/scss",
 						]
 
 # Set this to the root of your project when deployed:
