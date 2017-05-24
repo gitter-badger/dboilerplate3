@@ -48,7 +48,6 @@ INSTALLED_APPS = DJANGO_APPS + THIRDPARTY_APPS + APPS
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.gzip.GZipMiddleware',
-    'htmlmin.middleware.HtmlMinifyMiddleware',
     'django.middleware.http.ConditionalGetMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -58,6 +57,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
+    'htmlmin.middleware.HtmlMinifyMiddleware',
+    'htmlmin.middleware.MarkRequestMiddleware'
 )
 
 FILE_UPLOAD_HANDLERS = (
@@ -66,6 +67,13 @@ FILE_UPLOAD_HANDLERS = (
 )
 
 FILE_UPLOAD_MAX_MEMORY_SIZE = 10485760  # 10 MB in RAM for the uploads
+
+####################################################
+# HTML Minify                                      #
+####################################################
+
+HTML_MINIFY = True
+KEEP_COMMENTS_ON_MINIFYING = False
 
 ####################################################
 # Messaging (also know as django messages)         #
