@@ -44,7 +44,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'DBoilerplate3'
-copyright = u'2014, Clione Software, Havas Worldwide London Digital Team'
+copyright = u'2017, Esmorga Software'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

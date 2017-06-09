@@ -12,7 +12,7 @@ Clone the repository to your computer and run afterwards this command:
 
 This is the easiest way to install the template
 
-    $ django-admin startproject --template=https://github.com/clione/dboilerplate3/archive/master.zip <your_project_name>
+    $ django-admin startproject --template=https://github.com/esmorga/dboilerplate3/archive/master.zip <your_project_name>
 
 You can get a good grip of how this boilerplate works by looking the
 [documentation](http://dboilerplate3.readthedocs.org/en/latest/)
