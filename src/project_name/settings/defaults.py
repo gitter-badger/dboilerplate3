@@ -9,7 +9,7 @@ import mimetypes
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-VERSION = '20170414'
+VERSION = '20170630'
 
 ####################################################
 # Applications                                     #
@@ -126,16 +126,16 @@ TEMPLATES = [
             'debug': True,
             'context_processors': [
                 "django.contrib.auth.context_processors.auth",
-                "django.core.context_processors.debug",
-                "django.core.context_processors.i18n",
-                "django.core.context_processors.media",
-                "django.core.context_processors.static",
+                "django.template.context_processors.debug",
+                "django.template.context_processors.i18n",
+                "django.template.context_processors.media",
+                "django.template.context_processors.static",
                 "django.contrib.messages.context_processors.messages",
-                "django.core.context_processors.request",
+                "django.template.context_processors.request",
 
                 # Allauth
-                "allauth.account.context_processors.account",
-                "allauth.socialaccount.context_processors.socialaccount",
+                # "allauth.account.context_processors.account",
+                # "allauth.socialaccount.context_processors.socialaccount",
             ],
             'loaders': [
                 'django.template.loaders.filesystem.Loader',
