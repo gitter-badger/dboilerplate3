@@ -1,4 +1,8 @@
 django==1.11.2
 Pillow>=4.1.1
+mysqlclient
+psycopg2>=2.7.1
 django-allauth>=0.32.0
 django-htmlmin>=0.10.0
+django-localflavor>=1.5.1
+
