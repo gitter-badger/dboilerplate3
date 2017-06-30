@@ -1,6 +1,6 @@
 # dboilerplate3
 
-dboilerplate3 is a django template for setting up projects quickly, based in python 3 and django 1.10. There are two options to use it:
+dboilerplate3 is a django template for setting up projects quickly, based in python 3 and django 1.11. There are two options to use it:
 
 * Install it from the repository:
 
@@ -43,7 +43,7 @@ You will need grunt, bower and compass installed for this boilerplate uses SCSS 
 
 ### Requirements
 
-- Ruby 2.4+
+- Ruby 2.3+
 - NodeJS 7.7.x
 
 To install the required tools do (as root):
@@ -72,4 +72,4 @@ From frontend folder run...
 
 You're free to copy, modify and distribute this code under the MIT license.
 
-(c) 2014-2017 URCO Software
+(c) 2014-2017 Esmorga Software
