@@ -1,5 +1,7 @@
 # dboilerplate3
 
+[![Join the chat at https://gitter.im/esmorga/dboilerplate3](https://badges.gitter.im/esmorga/dboilerplate3.svg)](https://gitter.im/esmorga/dboilerplate3?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 dboilerplate3 is a django template for setting up projects quickly, based in python 3 and django 1.11. There are two options to use it:
 
 * Install it from the repository:
